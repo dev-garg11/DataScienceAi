@@ -1,90 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import TopAnnouncementBar from './components/TopAnnouncementBar';
-import Navbar from './components/Navbar';
+import React, { useState } from 'react';
+import Header from './components/Header';
 import Hero from './components/Hero';
-import PlacementPartners from './components/PlacementPartners';
-import ToolsMastered from './components/ToolsMastered';
-import ProjectsShowcase from './components/ProjectsShowcase';
-import Roadmap from './components/Roadmap';
-import ComparisonTable from './components/ComparisonTable';
-import EmiCalculator from './components/EmiCalculator';
-import FaqAccordion from './components/FaqAccordion';
-import CtaBanner from './components/CtaBanner';
+import StatsStrip from './components/StatsStrip';
+import HiringPartners from './components/HiringPartners';
+import Curriculum from './components/Curriculum';
+import CareerRoles from './components/CareerRoles';
+import ProjectsSection from './components/ProjectsSection';
+import CaseStudies from './components/CaseStudies';
+import Certifications from './components/Certifications';
+import LifeAtInstitute from './components/LifeAtInstitute';
+import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import StickyMobileBar from './components/StickyMobileBar';
-import ProjectModal from './components/ProjectModal';
-import DemoModal from './components/DemoModal';
+import LeadModal from './components/LeadModal';
 import Toast from './components/Toast';
 
 export default function App() {
-  const [isDark, setIsDark] = useState(true);
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const [modalConfig, setModalConfig] = useState({ isOpen: false, title: '' });
   const [toastMessage, setToastMessage] = useState(null);
 
-  useEffect(() => {
-    // Check saved theme or system preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
+  const openModal = (title) => {
+    setModalConfig({ isOpen: true, title });
+  };
 
-  const toggleTheme = () => {
-    if (isDark) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDark(false);
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      setIsDark(true);
-    }
+  const closeModal = () => {
+    setModalConfig({ isOpen: false, title: '' });
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#080c14] dark:text-slate-100 transition-colors duration-200">
-      <TopAnnouncementBar />
-      
-      <Navbar
-        isDark={isDark}
-        toggleTheme={toggleTheme}
-        onOpenDemo={() => setIsDemoOpen(true)}
-      />
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#070b14] dark:text-slate-100 transition-colors duration-200 antialiased selection:bg-blue-600 selection:text-white">
+      {/* Top Navigation */}
+      <Header onOpenModal={openModal} />
 
+      {/* Main Content */}
       <main>
-        <Hero onOpenDemo={() => setIsDemoOpen(true)} />
-        <PlacementPartners />
-        <ToolsMastered />
-        <ProjectsShowcase
-          onSelectProject={(proj) => setSelectedProject(proj)}
-          onOpenDemo={() => setIsDemoOpen(true)}
+        <Hero
+          onOpenModal={openModal}
+          onSuccess={(msg) => setToastMessage(msg)}
         />
-        <Roadmap />
-        <ComparisonTable />
-        <EmiCalculator onOpenDemo={() => setIsDemoOpen(true)} />
-        <FaqAccordion />
-        <CtaBanner onOpenDemo={() => setIsDemoOpen(true)} />
+        <StatsStrip />
+        <HiringPartners onOpenModal={openModal} />
+        <Curriculum onOpenModal={openModal} />
+        <CareerRoles onOpenModal={openModal} />
+        <ProjectsSection onOpenModal={openModal} />
+        <CaseStudies onOpenModal={openModal} />
+        <Certifications />
+        <LifeAtInstitute />
+        <FaqSection />
       </main>
 
+      {/* Footer */}
       <Footer />
 
-      <StickyMobileBar onOpenDemo={() => setIsDemoOpen(true)} />
+      {/* Mobile Sticky Bar */}
+      <StickyMobileBar onOpenModal={openModal} />
 
-      {/* Modals */}
-      <ProjectModal
-        project={selectedProject}
-        onClose={() => setSelectedProject(null)}
-        onOpenDemo={() => setIsDemoOpen(true)}
-      />
-
-      <DemoModal
-        isOpen={isDemoOpen}
-        onClose={() => setIsDemoOpen(false)}
+      {/* Popup Form Modal */}
+      <LeadModal
+        isOpen={modalConfig.isOpen}
+        title={modalConfig.title}
+        onClose={closeModal}
         onSuccess={(msg) => setToastMessage(msg)}
       />
 
@@ -96,4 +71,3 @@ export default function App() {
     </div>
   );
 }
-

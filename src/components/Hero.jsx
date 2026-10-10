@@ -1,128 +1,205 @@
-import React from 'react';
-import { Layers, Monitor, Award, ArrowRight, PhoneCall, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Flame, Star, StarHalf, Loader2 } from 'lucide-react';
+import { courseInfo } from '../data/5trainersData';
 
-export default function Hero({ onOpenDemo }) {
+export default function Hero({ onOpenModal, onSuccess }) {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    whatsapp: true
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      setFormData({ name: '', email: '', phone: '', whatsapp: true });
+      onSuccess(`🎉 Mubarak! Your Free 60-Min Live Trial Class at 5Trainers Sector 74 Mohali is booked. Our team will contact you shortly.`);
+    }, 1000);
+  };
+
   return (
-    <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-28 overflow-hidden mesh-gradient">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Content */}
-          <div className="lg:col-span-7 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-brand-500/30 text-xs font-bold text-brand-600 dark:text-brand-400 mb-6 shadow-sm">
-              <span className="text-sm">🏆</span>
-              <span>#1 Rated Data Science Training in Chandigarh</span>
+    <section className="bg-slate-50 dark:bg-[#070b14] text-slate-900 dark:text-slate-100 relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200 dark:border-slate-800">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_440px] gap-10 lg:gap-14 items-center">
+        
+        {/* Left Column */}
+        <div>
+          <div className="text-[11px] sm:text-xs font-bold tracking-[0.18em] uppercase text-orange-600 dark:text-orange-400 mb-3 sm:mb-4">
+            {courseInfo.badge}
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12] mb-5">
+            Data Science Course in{' '}
+            <span className="relative whitespace-nowrap text-blue-600 dark:text-blue-400 inline-block">
+              Mohali
+              <svg viewBox="0 0 200 18" preserveAspectRatio="none" className="absolute left-0 right-0 -bottom-2 w-full h-3 text-orange-500 fill-none stroke-current stroke-[3] stroke-linecap-round">
+                <path d="M2 10 Q 50 2, 100 9 T 198 7" />
+              </svg>
+            </span>
+          </h1>
+
+          <p className="text-[15px] sm:text-[17px] leading-relaxed text-slate-600 dark:text-slate-300 max-w-2xl mb-7">
+            {courseInfo.description}
+          </p>
+
+          {/* 4 Action Buttons in 2x2 Grid */}
+          <div className="grid grid-cols-2 gap-3 mb-6 max-w-md">
+            <a
+              href="#lead-form"
+              className="h-12 w-full rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+            >
+              Enroll now
+            </a>
+            <button
+              onClick={() => onOpenModal('Download Brochure')}
+              className="h-12 w-full rounded-lg bg-[#16a34a] hover:bg-[#15803d] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+            >
+              Download brochure
+            </button>
+            <button
+              onClick={() => onOpenModal('Attempt Assessment Test')}
+              className="h-12 w-full rounded-lg bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+            >
+              Attempt test
+            </button>
+            <button
+              onClick={() => onOpenModal('Get Interview Questions Pack')}
+              className="h-12 w-full rounded-lg bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+            >
+              Interview question
+            </button>
+          </div>
+
+          {/* Social Proof Badges */}
+          <div className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mb-6">
+            <Flame className="w-4 h-4 text-orange-500 fill-orange-500" />
+            <span>{courseInfo.cohortInfo}</span>
+          </div>
+
+          <div className="flex items-baseline gap-3">
+            <div className="text-3xl font-black">{courseInfo.rating}<span className="text-base text-slate-500">/5</span></div>
+            <div>
+              <div className="flex text-amber-400 gap-0.5">
+                {[...Array(4)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400" />
+                ))}
+                <StarHalf className="w-4 h-4 fill-amber-400" />
+              </div>
+              <div className="text-xs text-slate-500 font-semibold">{courseInfo.reviewsCount}</div>
             </div>
+          </div>
+        </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12] mb-6">
-              Next-Gen <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 via-purple-500 to-pink-500">
-                Data Science & AI
-              </span>
-            </h1>
-
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Launch your future with AI-powered Data Science. Master Python, Machine Learning, SQL, Generative AI & Agentic Automation in just 6 months — even with zero coding background.
+        {/* Right Column: Lead Form */}
+        <div id="lead-form" className="scroll-mt-24">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white dark:bg-[#0d1320] text-slate-900 dark:text-slate-100 rounded-2xl p-6 sm:p-7 shadow-2xl border border-slate-200 dark:border-slate-800 relative"
+          >
+            <h3 className="text-center text-lg font-black mb-1">
+              Book a Live Class - <span className="text-blue-600 dark:text-blue-400">Free</span>
+            </h3>
+            <p className="text-center text-xs text-slate-500 dark:text-slate-400 mb-5">
+              Free 60-min trial — no account, no payment
             </p>
 
-            {/* Key USPs Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8 text-left max-w-xl mx-auto lg:mx-0">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm">
-                <Layers className="w-4 h-4 text-brand-500 flex-shrink-0" />
-                <span className="text-xs font-bold">8 Real Projects</span>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full h-11 px-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm">
-                <Monitor className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                <span className="text-xs font-bold">Daily 2-Hr Guided Labs</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm">
-                <Award className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                <span className="text-xs font-bold">Placement Support</span>
-              </div>
-            </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full h-11 px-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Phone Number <span className="text-red-500">*</span>
+                </label>
+                <div className="w-full h-11 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center overflow-hidden focus-within:ring-2 focus-within:ring-blue-500">
+                  <span className="px-3 text-xs font-bold text-slate-500 border-r border-slate-300 dark:border-slate-700">
+                    +91
+                  </span>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="Enter phone number"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="flex-1 h-full px-3 text-sm bg-transparent border-none outline-none"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Your Course of Interest <span className="text-red-500">*</span>
+                </label>
+                <select
+                  disabled
+                  className="w-full h-11 px-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-sm font-semibold opacity-90 cursor-not-allowed"
+                >
+                  <option>Data Science (6 Months Industrial Training)</option>
+                </select>
+              </div>
+
+              <label className="flex items-center gap-2 text-xs font-medium text-slate-700 dark:text-slate-300 cursor-pointer pt-1">
+                <input
+                  type="checkbox"
+                  checked={formData.whatsapp}
+                  onChange={(e) => setFormData({ ...formData, whatsapp: e.target.checked })}
+                  className="rounded text-blue-600 focus:ring-blue-500"
+                />
+                <span>Send me updates on WhatsApp</span>
+              </label>
+
               <button
-                onClick={onOpenDemo}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 via-brand-500 to-purple-600 hover:from-brand-700 hover:to-purple-700 text-white font-extrabold text-sm shadow-lg shadow-brand-500/25 hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                type="submit"
+                disabled={loading}
+                className="w-full h-11 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition flex items-center justify-center gap-2 shadow-md shadow-blue-500/20"
               >
-                <span>Book Free Demo Class</span>
-                <ArrowRight className="w-4 h-4" />
+                {loading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Booking Seat...</span>
+                  </>
+                ) : (
+                  'Book Free Class'
+                )}
               </button>
-              <a
-                href="tel:9815489999"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl glass-card font-bold text-sm hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700 transition flex items-center justify-center gap-2 text-slate-800 dark:text-white"
-              >
-                <PhoneCall className="w-4 h-4 text-brand-500" />
-                <span>Call: 9815489999</span>
-              </a>
-            </div>
 
-            {/* Verified Stats */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-10 mt-10 pt-8 border-t border-slate-200 dark:border-slate-800/80">
-              <div>
-                <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">6 Months</div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase">24 Wks / 20 hrs/wk</div>
-              </div>
-              <div className="w-px h-10 bg-slate-300 dark:bg-slate-800"></div>
-              <div>
-                <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400">8 Projects</div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase">Portfolio Proof</div>
-              </div>
-              <div className="w-px h-10 bg-slate-300 dark:bg-slate-800"></div>
-              <div>
-                <div className="text-2xl sm:text-3xl font-black text-amber-500">Sec 34A</div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase">SCO 64-65, 4th Flr</div>
+              <div className="text-center text-[11px] text-slate-400">
+                By continuing, you agree to 5Trainers Terms & Conditions for Signup
               </div>
             </div>
-          </div>
-
-          {/* Right Visual Hero Card */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 bg-slate-900 group">
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop"
-                alt="Data Science Training in Sector 34A Chandigarh"
-                className="w-full h-[410px] object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
-              
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <span className="px-2.5 py-1 rounded-full bg-brand-600 text-[10px] font-black uppercase tracking-wider mb-2 inline-block">
-                  Sector 34A Campus
-                </span>
-                <h3 className="text-base font-black leading-snug">Guided Computer Lab & Practical Project Training</h3>
-                <p className="text-xs text-slate-300 mt-1">Daily coding labs in Python, SQL, Excel, Pandas & Machine Learning.</p>
-              </div>
-            </div>
-
-            {/* Floating Badge 1 */}
-            <div className="hidden sm:flex absolute -top-4 -left-6 glass-card p-3 rounded-2xl shadow-xl border border-brand-500/30 items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-black">
-                <MapPin className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="text-xs font-black text-slate-900 dark:text-white">Sector 34A, Chandigarh</div>
-                <div className="text-[10px] text-brand-600 dark:text-brand-400 font-bold">SCO 64-65, 4th Floor</div>
-              </div>
-            </div>
-
-            {/* Floating Badge 2 */}
-            <div className="hidden sm:flex absolute -bottom-4 -right-4 glass-card p-3 rounded-2xl shadow-xl border border-emerald-500/30 items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-black">
-                <PhoneCall className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="text-xs font-black text-slate-900 dark:text-white">Direct Helpline</div>
-                <div className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">📞 9815489999</div>
-              </div>
-            </div>
-          </div>
-
+          </form>
         </div>
+
       </div>
     </section>
   );
 }
-
