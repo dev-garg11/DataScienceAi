@@ -1,14 +1,20 @@
 export const courseInfo = {
-  title: "Data Science Course in Mohali",
-  badge: "OFFLINE · 6 MONTHS · Mohali",
+  title: "Data Science Course in Chandigarh",
+  badge: "OFFLINE · 6 MONTHS · Sector 34A Chandigarh",
   tagline: "Python, SQL & Machine Learning with 10–12 hands-on industry projects",
-  description: "Join the 6-month Data Science Course in Mohali at 5Trainers and learn Python, statistics, machine learning, deep learning, SQL, data visualization and real-world model building. Students receive classroom training, practical assignments, 10 real-world projects, interview preparation, internship guidance and placement assistance at our Sector 74 Mohali campus.",
+  description: "Join the 6-month Data Science Course at Morph Academy and learn Python, statistics, machine learning, deep learning, SQL, data visualization and real-world model building. Students receive classroom training, practical assignments, 10+ real-world projects, interview preparation, internship guidance and placement assistance at our Sector 34A Chandigarh campus.",
   rating: "4.7",
   reviewsCount: "60+ reviews",
   cohortInfo: "30+ students in recent Data Science cohorts",
-  phone: "+91 8283840606",
-  phoneRaw: "+918283840606",
-  campusAddress: "Plot No. C-205, Phase 8B, Industrial Area, Sector 74, Mohali, Punjab 160071",
+  phone: "+91 9501489999",
+  phoneRaw: "+919501489999",
+  phones: [
+    { display: "+91 9501489999", raw: "+919501489999" },
+    { display: "+91 9815489999", raw: "+919815489999" },
+    { display: "+91 9115511250", raw: "+919115511250" }
+  ],
+  email: "info@morphacademy.com",
+  campusAddress: "SCO 64-65, 4th Floor, Sub. City Center, Sector 34A, Chandigarh",
   feeEmi: "EMI starting ₹10,500*"
 };
 

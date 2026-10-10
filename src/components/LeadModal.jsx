@@ -33,7 +33,7 @@ export default function LeadModal({ isOpen, title, onClose, onSuccess }) {
     setTimeout(() => {
       setLoading(false);
       setFormData({ name: '', email: '', phone: '', whatsapp: true });
-      onSuccess(`🎉 Request received for "${title}"! Our counselor will call you at ${formData.phone || '+91 8283840606'}.`);
+      onSuccess(`🎉 Request received for "${title}"! Our counselor will call you at ${formData.phone || '+91 9501489999'}.`);
       onClose();
     }, 1000);
   };

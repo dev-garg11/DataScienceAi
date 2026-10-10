@@ -18,7 +18,7 @@ export default function Hero({ onOpenModal, onSuccess }) {
     setTimeout(() => {
       setLoading(false);
       setFormData({ name: '', email: '', phone: '', whatsapp: true });
-      onSuccess(`🎉 Mubarak! Your Free 60-Min Live Trial Class at 5Trainers Sector 74 Mohali is booked. Our team will contact you shortly.`);
+      onSuccess(`🎉 Mubarak! Your Free 60-Min Live Trial Class at Morph Academy (Sector 34A Chandigarh) is booked. Our team will contact you shortly.`);
     }, 1000);
   };
 

@@ -6,7 +6,7 @@ export const videoList = [
     id: 'sd_hsh10F88',
     title: 'Student Review & Coding Lab Experience',
     tag: 'Lab Session',
-    caption: 'Hands-on practical training and mentor guidance at Sector 74 Mohali campus.'
+    caption: 'Hands-on practical training and mentor guidance at Sector 34A Chandigarh campus.'
   },
   {
     id: 'rjNPet26kJ8',
@@ -45,7 +45,7 @@ export default function StudentVideos({ onOpenModal }) {
           </h2>
           
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
-            Real feedback, project demos, and classroom moments from our Data Science cohorts at Sector 74 Mohali.
+            Real feedback, project demos, and classroom moments from our Data Science cohorts at Sector 34A Chandigarh.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function StudentVideos({ onOpenModal }) {
           <div className="text-center md:text-left">
             <h3 className="text-xl sm:text-2xl font-black">Want to experience our classroom in person?</h3>
             <p className="text-xs sm:text-sm text-blue-100 mt-1">
-              Visit our Sector 74 Mohali campus, attend a free 60-min live demo, and talk to current batch students.
+              Visit our Sector 34A Chandigarh campus, attend a free 60-min live demo, and talk to current batch students.
             </p>
           </div>
           <button

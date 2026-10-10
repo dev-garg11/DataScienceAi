@@ -13,7 +13,7 @@ export default function StickyMobileBar({ onOpenModal }) {
         <span>Call</span>
       </a>
       <a
-        href={`https://wa.me/918283840606?text=${encodeURIComponent('Hi, I am interested in the Data Science Course in Mohali at 5Trainers')}`}
+        href={`https://wa.me/919501489999?text=${encodeURIComponent('Hi, I am interested in the Data Science Course at Morph Academy Sector 34A Chandigarh')}`}
         target="_blank"
         rel="noreferrer"
         className="flex-1 py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition"
