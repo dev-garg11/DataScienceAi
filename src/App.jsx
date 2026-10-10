@@ -7,6 +7,7 @@ import Curriculum from './components/Curriculum';
 import CareerRoles from './components/CareerRoles';
 import ProjectsSection from './components/ProjectsSection';
 import CaseStudies from './components/CaseStudies';
+import StudentVideos from './components/StudentVideos';
 import Certifications from './components/Certifications';
 import LifeAtInstitute from './components/LifeAtInstitute';
 import FaqSection from './components/FaqSection';
@@ -44,6 +45,7 @@ export default function App() {
         <CareerRoles onOpenModal={openModal} />
         <ProjectsSection onOpenModal={openModal} />
         <CaseStudies onOpenModal={openModal} />
+        <StudentVideos onOpenModal={openModal} />
         <Certifications />
         <LifeAtInstitute />
         <FaqSection />

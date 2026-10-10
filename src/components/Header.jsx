@@ -26,8 +26,8 @@ export default function Header({ onOpenModal }) {
             <a href="#projects" className="hover:text-blue-600 transition-colors">12 Projects</a>
             <a href="#roles" className="hover:text-blue-600 transition-colors">Career Roles</a>
             <a href="#case-studies" className="hover:text-blue-600 transition-colors">Case Studies</a>
+            <a href="#student-videos" className="text-red-600 dark:text-red-400 font-bold hover:text-red-700 transition-colors">Student Videos</a>
             <a href="#faq" className="hover:text-blue-600 transition-colors">FAQs</a>
-            <a href="#lead-form" className="hover:text-blue-600 transition-colors">Offline Campus</a>
           </nav>
 
           {/* Action Buttons */}
@@ -72,6 +72,7 @@ export default function Header({ onOpenModal }) {
               <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100 dark:border-slate-800">12 Industry Projects</a>
               <a href="#roles" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100 dark:border-slate-800">Career Roles</a>
               <a href="#case-studies" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100 dark:border-slate-800">Student Case Studies</a>
+              <a href="#student-videos" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100 dark:border-slate-800 text-red-600 dark:text-red-400 font-bold">Students on Camera</a>
               <a href="#faq" onClick={() => setMobileMenuOpen(false)} className="py-2 border-b border-slate-100 dark:border-slate-800">FAQs</a>
             </nav>
             <div className="pt-2 flex flex-col gap-2">
