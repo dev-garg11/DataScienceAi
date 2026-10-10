@@ -47,6 +47,11 @@ export default function StudentVideos({ onOpenModal }) {
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
             Real feedback, project demos, and classroom moments from our Data Science cohorts at Sector 34A Chandigarh.
           </p>
+
+          <div className="inline-flex items-center gap-2 mt-4 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>⚡ Autoplay Enabled (Muted by default) · Tap speaker icon to unmute</span>
+          </div>
         </div>
 
         {/* 4 Shorts Grid */}
@@ -59,12 +64,11 @@ export default function StudentVideos({ onOpenModal }) {
               {/* Responsive 9:16 Aspect Ratio Container */}
               <div className="relative w-full aspect-[9/16] bg-slate-950 overflow-hidden">
                 <iframe
-                  src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&playsinline=1`}
+                  src={`https://www.youtube.com/embed/${video.id}?autoplay=1&mute=1&loop=1&playlist=${video.id}&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`}
                   title={video.title}
                   className="w-full h-full border-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
-                  loading="lazy"
                 ></iframe>
               </div>
 

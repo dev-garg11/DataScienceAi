@@ -18,7 +18,7 @@ export default function FaqSection() {
             Got Questions?
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white">
-            Data Science Course in Mohali — <span className="text-blue-600 dark:text-blue-400">Questions Answered</span>
+            Data Science & AI Program — <span className="text-blue-600 dark:text-blue-400">Questions Answered</span>
           </h2>
         </div>
 

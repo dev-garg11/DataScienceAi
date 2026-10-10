@@ -50,7 +50,7 @@ export default function LeadModal({ isOpen, title, onClose, onSuccess }) {
         <div className="flex items-center justify-between mb-6">
           <div>
             <span className="text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest">
-              5Trainers Mohali Campus
+              Morph Academy Chandigarh Campus
             </span>
             <h3 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-1">
               {title || 'Request Callback'}

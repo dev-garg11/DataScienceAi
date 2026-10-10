@@ -33,9 +33,9 @@ export default function Hero({ onOpenModal, onSuccess }) {
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12] mb-5">
-            Data Science Course in{' '}
+            Data Science & AI Course in{' '}
             <span className="relative whitespace-nowrap text-blue-600 dark:text-blue-400 inline-block">
-              Mohali
+              Chandigarh
               <svg viewBox="0 0 200 18" preserveAspectRatio="none" className="absolute left-0 right-0 -bottom-3 w-full h-5 overflow-visible pointer-events-none" aria-hidden="true">
                 <path d="M2 10 Q 50 2, 100 9 T 198 7" fill="none" stroke="#f97316" strokeWidth="3.2" strokeLinecap="round" pathLength="1" className="animate-wavy-underline" />
                 <path d="M3 13 Q 55 5, 102 12 T 197 10" fill="none" stroke="#ea580c" strokeWidth="2.2" strokeLinecap="round" pathLength="1" className="animate-wavy-underline-delayed" />
@@ -43,9 +43,29 @@ export default function Hero({ onOpenModal, onSuccess }) {
             </span>
           </h1>
 
-          <p className="text-[15px] sm:text-[17px] leading-relaxed text-slate-600 dark:text-slate-300 max-w-2xl mb-7">
+          <p className="text-[15px] sm:text-[17px] leading-relaxed text-slate-600 dark:text-slate-300 max-w-2xl mb-6">
             {courseInfo.description}
           </p>
+
+          {/* Key Program Highlights */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-7 max-w-2xl">
+            <div className="flex items-center gap-2 p-2.5 rounded-xl bg-blue-50/80 dark:bg-blue-950/30 border border-blue-200/60 dark:border-blue-900/40 text-xs font-bold text-slate-800 dark:text-slate-200">
+              <span className="w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></span>
+              <span>100% Practical Labs</span>
+            </div>
+            <div className="flex items-center gap-2 p-2.5 rounded-xl bg-emerald-50/80 dark:bg-emerald-950/30 border border-emerald-200/60 dark:border-emerald-900/40 text-xs font-bold text-slate-800 dark:text-slate-200">
+              <span className="w-2 h-2 rounded-full bg-emerald-600 flex-shrink-0"></span>
+              <span>10+ Capstone Projects</span>
+            </div>
+            <div className="flex items-center gap-2 p-2.5 rounded-xl bg-purple-50/80 dark:bg-purple-950/30 border border-purple-200/60 dark:border-purple-900/40 text-xs font-bold text-slate-800 dark:text-slate-200">
+              <span className="w-2 h-2 rounded-full bg-purple-600 flex-shrink-0"></span>
+              <span>Python & GenAI</span>
+            </div>
+            <div className="flex items-center gap-2 p-2.5 rounded-xl bg-orange-50/80 dark:bg-orange-950/30 border border-orange-200/60 dark:border-orange-900/40 text-xs font-bold text-slate-800 dark:text-slate-200">
+              <span className="w-2 h-2 rounded-full bg-orange-600 flex-shrink-0"></span>
+              <span>100% Placement Help</span>
+            </div>
+          </div>
 
           {/* 4 Action Buttons in 2x2 Grid */}
           <div className="grid grid-cols-2 gap-3 mb-6 max-w-md">
@@ -194,7 +214,7 @@ export default function Hero({ onOpenModal, onSuccess }) {
               </button>
 
               <div className="text-center text-[11px] text-slate-400">
-                By continuing, you agree to 5Trainers Terms & Conditions for Signup
+                By continuing, you agree to Morph Academy Terms & Conditions
               </div>
             </div>
           </form>

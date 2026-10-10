@@ -1,9 +1,9 @@
 export const courseInfo = {
-  title: "Data Science Course in Chandigarh",
-  badge: "OFFLINE · 6 MONTHS · Sector 34A Chandigarh",
-  tagline: "Python, SQL & Machine Learning with 10–12 hands-on industry projects",
-  description: "Join the 6-month Data Science Course at Morph Academy and learn Python, statistics, machine learning, deep learning, SQL, data visualization and real-world model building. Students receive classroom training, practical assignments, 10+ real-world projects, interview preparation, internship guidance and placement assistance at our Sector 34A Chandigarh campus.",
-  rating: "4.7",
+  title: "Data Science & AI Master Course in Chandigarh",
+  badge: "🔥 OFFLINE CLASSROOM · 6 MONTHS · SECTOR 34A CHANDIGARH",
+  tagline: "Python, SQL, Machine Learning & Generative AI with 10–12 hands-on industry capstones",
+  description: "Accelerate your career with the 6-Month Data Science & Artificial Intelligence Master Program at Morph Academy, Sector 34A Chandigarh. Gain in-depth practical mastery in Python, SQL, Statistics, Machine Learning, Deep Learning, Power BI & Generative AI with 10+ real-world capstone projects, 1-on-1 code reviews, paid internship opportunities, and 100% placement support.",
+  rating: "4.8",
   reviewsCount: "60+ reviews",
   cohortInfo: "30+ students in recent Data Science cohorts",
   phone: "+91 9501489999",
@@ -363,48 +363,48 @@ export const lifeAtInstitute = [
 
 export const faqs = [
   {
-    q: "Which is the best data science institute in Mohali?",
-    a: "5Trainers is considered one of the best institutes for Data Science training in Mohali because of its practical learning approach, experienced trainers, internship opportunities, and placement assistance."
+    q: "Which is the best data science institute in Chandigarh?",
+    a: "Morph Academy (Sector 34A, Chandigarh) is widely recognized as the premier institute for Data Science & AI training in Chandigarh and the Tricity area due to its 100% practical lab approach, live industry mentors, hands-on capstone projects, and dedicated placement assistance."
   },
   {
-    q: "What is the duration of the Data Science course at 5Trainers?",
-    a: "The course duration is 6 months, offering both weekday and weekend batches to suit students and working professionals."
+    q: "What is the duration of the Data Science course at Morph Academy?",
+    a: "The course duration is 6 months, offering both weekday and weekend offline classroom batches to suit college students and working professionals."
   },
   {
-    q: "Does 5Trainers provide placement assistance?",
-    a: "Yes, we provide complete placement assistance including resume building, regular mock interviews, and active placement support through our network of hiring partners."
+    q: "Does Morph Academy provide placement assistance?",
+    a: "Yes, we provide 100% complete placement assistance including resume building, regular mock interviews, and active placement support through our network of 30+ hiring partners."
   },
   {
     q: "Is this course suitable for beginners?",
-    a: "Yes, the course starts from data science fundamentals and is suitable for beginners with no prior coding or programming background."
+    a: "Yes, the course starts from data science fundamentals and Python basics, making it ideal for beginners with no prior coding or programming background."
   },
   {
     q: "Will I get practical project experience?",
-    a: "Yes, every module includes a hands-on practical project, and you will also work on real-time industry capstone projects."
+    a: "Yes, every module includes a hands-on practical assignment, and you will also work on 10+ real-time industry capstone projects."
   },
   {
-    q: "What does an industry-focused curriculum mean at 5Trainers?",
-    a: "Our industry-focused curriculum is designed and updated in collaboration with over 15+ active tech professionals. This ensures that you learn the exact tools, frameworks, and job-ready skills that employers in Chandigarh, Mohali, and across India are currently hiring for, rather than outdated academic theories."
+    q: "What does an industry-focused curriculum mean at Morph Academy?",
+    a: "Our industry-focused curriculum is designed and updated in collaboration with over 15+ active tech professionals. This ensures that you learn the exact tools, frameworks, and job-ready skills (Python, SQL, Machine Learning, Power BI, GenAI) that employers in Chandigarh and top IT hubs are currently hiring for."
   },
   {
     q: "How does the practical learning approach and hands-on training work?",
-    a: "We follow a 100% hands-on training methodology. Instead of passive lectures, you build projects from day one — writing code, researching datasets, building models, and deploying applications. You will work on real-world case studies and live projects, getting practical experience that prepares you to work in a real job environment immediately after graduation."
+    a: "We follow a 100% hands-on training methodology. Instead of passive lectures, you build projects from day one — writing code, researching datasets, building models, and deploying applications at our Sector 34A Chandigarh labs."
   },
   {
-    q: "What kind of placement assistance and career support does 5Trainers provide?",
-    a: "5Trainers provides 100% lifetime placement assistance to all our graduates. This includes professional resume writing, LinkedIn profile optimization, intensive mock interview preparation with industry recruiters, and direct referrals to our network of 30+ hiring partners in Mohali, Chandigarh, and major IT hubs."
+    q: "What kind of placement assistance and career support does Morph Academy provide?",
+    a: "Morph Academy provides 100% lifetime placement assistance to all our graduates. This includes professional resume writing, LinkedIn profile optimization, intensive mock interview preparation with industry recruiters, and direct job referrals."
   },
   {
-    q: "Who can join the courses offered by 5Trainers?",
-    a: "Our IT training courses are beginner-friendly and built from scratch for a diverse audience. They are open to students, fresh graduates, beginners with no technical background, working professionals looking for a career upgrade, entrepreneurs, freelancers, job seekers, career switchers, and business owners looking to digitize their operations."
+    q: "Who can join the courses offered by Morph Academy?",
+    a: "Our IT training courses are beginner-friendly and built from scratch for a diverse audience. They are open to students, fresh graduates, beginners with no technical background, working professionals looking for a career upgrade, and job seekers."
   },
   {
     q: "What are the flexible learning modes and batch timings available?",
-    a: "To accommodate college students and working professionals, we offer highly flexible learning modes. You can choose between offline classroom training at our Mohali centre, live interactive online classes, or a hybrid format. We run flexible weekday and weekend batches, and all classes are recorded so you can revise at your own pace."
+    a: "To accommodate college students and working professionals, we offer highly flexible learning modes at our Sector 34A Chandigarh centre. We run flexible weekday and weekend batches, and all classes are recorded so you can revise at your own pace."
   },
   {
     q: "Do your courses include live project experience and recognized certification?",
-    a: "Yes. Every course includes hands-on experience on live projects. Upon successful completion of your training and capstone projects, you will receive a recognized 5Trainers course completion certificate. We also provide dedicated certification guidance for global credentials from industry leaders like Google, Microsoft, and Meta."
+    a: "Yes. Every course includes hands-on experience on live projects. Upon successful completion of your training and capstone projects, you will receive a recognized Morph Academy course completion certificate. We also provide dedicated certification guidance for global credentials from industry leaders like Google, Microsoft, and Meta."
   }
 ];
 
