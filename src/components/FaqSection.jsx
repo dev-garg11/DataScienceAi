@@ -29,11 +29,11 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#0d1322] border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition"
+                className="bg-white dark:bg-[#0d1322] border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden transition shadow-sm hover:shadow"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-slate-900 dark:text-white"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-slate-900 dark:text-white cursor-pointer"
                 >
                   <span className="flex items-center gap-3">
                     <span className="text-blue-600 dark:text-blue-400 font-mono font-black text-xs sm:text-sm">
@@ -42,16 +42,21 @@ export default function FaqSection() {
                     <span>{faq.q}</span>
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-400 transition-transform duration-200 flex-shrink-0 ${
+                    className={`w-5 h-5 text-slate-400 transition-transform duration-300 flex-shrink-0 ${
                       isOpen ? 'rotate-180 text-blue-600' : ''
                     }`}
                   />
                 </button>
-                {isOpen && (
-                  <div className="p-5 pt-0 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80">
+                
+                <div
+                  className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                    isOpen ? 'max-h-96 opacity-100 p-5 pt-0' : 'max-h-0 opacity-0 p-0'
+                  }`}
+                >
+                  <div className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/80 pt-4">
                     {faq.a}
                   </div>
-                )}
+                </div>
               </div>
             );
           })}
@@ -61,4 +66,3 @@ export default function FaqSection() {
     </section>
   );
 }
-

@@ -124,3 +124,4 @@ export default function StudentVideos({ onOpenModal }) {
     </section>
   );
 }
+

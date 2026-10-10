@@ -36,8 +36,9 @@ export default function Hero({ onOpenModal, onSuccess }) {
             Data Science Course in{' '}
             <span className="relative whitespace-nowrap text-blue-600 dark:text-blue-400 inline-block">
               Mohali
-              <svg viewBox="0 0 200 18" preserveAspectRatio="none" className="absolute left-0 right-0 -bottom-2 w-full h-3 text-orange-500 fill-none stroke-current stroke-[3] stroke-linecap-round">
-                <path d="M2 10 Q 50 2, 100 9 T 198 7" />
+              <svg viewBox="0 0 200 18" preserveAspectRatio="none" className="absolute left-0 right-0 -bottom-3 w-full h-5 overflow-visible pointer-events-none" aria-hidden="true">
+                <path d="M2 10 Q 50 2, 100 9 T 198 7" fill="none" stroke="#f97316" strokeWidth="3.2" strokeLinecap="round" pathLength="1" className="animate-wavy-underline" />
+                <path d="M3 13 Q 55 5, 102 12 T 197 10" fill="none" stroke="#ea580c" strokeWidth="2.2" strokeLinecap="round" pathLength="1" className="animate-wavy-underline-delayed" />
               </svg>
             </span>
           </h1>
@@ -50,33 +51,33 @@ export default function Hero({ onOpenModal, onSuccess }) {
           <div className="grid grid-cols-2 gap-3 mb-6 max-w-md">
             <a
               href="#lead-form"
-              className="h-12 w-full rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+              className="h-12 w-full rounded-lg bg-blue-600 hover:bg-blue-700 active:scale-[0.98] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
             >
               Enroll now
             </a>
             <button
               onClick={() => onOpenModal('Download Brochure')}
-              className="h-12 w-full rounded-lg bg-[#16a34a] hover:bg-[#15803d] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+              className="h-12 w-full rounded-lg bg-[#16a34a] hover:bg-[#15803d] active:scale-[0.98] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
             >
               Download brochure
             </button>
             <button
               onClick={() => onOpenModal('Attempt Assessment Test')}
-              className="h-12 w-full rounded-lg bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+              className="h-12 w-full rounded-lg bg-[#ea580c] hover:bg-[#c2410c] active:scale-[0.98] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
             >
               Attempt test
             </button>
             <button
               onClick={() => onOpenModal('Get Interview Questions Pack')}
-              className="h-12 w-full rounded-lg bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
+              className="h-12 w-full rounded-lg bg-[#7c3aed] hover:bg-[#6d28d9] active:scale-[0.98] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition shadow-sm"
             >
               Interview question
             </button>
           </div>
 
           {/* Social Proof Badges */}
-          <div className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mb-6">
-            <Flame className="w-4 h-4 text-orange-500 fill-orange-500" />
+          <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-800 dark:text-slate-200 mb-6 bg-orange-500/10 px-3.5 py-1.5 rounded-full border border-orange-500/20">
+            <Flame className="w-4 h-4 text-orange-500 fill-orange-500 animate-flame" />
             <span>{courseInfo.cohortInfo}</span>
           </div>
 
