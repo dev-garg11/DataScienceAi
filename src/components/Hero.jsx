@@ -33,9 +33,9 @@ export default function Hero({ onOpenModal, onSuccess }) {
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.12] mb-5">
-            Data Science & AI Course in{' '}
+            Become a Certified{' '}
             <span className="relative whitespace-nowrap text-blue-600 dark:text-blue-400 inline-block">
-              Chandigarh
+              Data Scientist & AI Expert
               <svg viewBox="0 0 200 18" preserveAspectRatio="none" className="absolute left-0 right-0 -bottom-3 w-full h-5 overflow-visible pointer-events-none" aria-hidden="true">
                 <path d="M2 10 Q 50 2, 100 9 T 198 7" fill="none" stroke="#f97316" strokeWidth="3.2" strokeLinecap="round" pathLength="1" className="animate-wavy-underline" />
                 <path d="M3 13 Q 55 5, 102 12 T 197 10" fill="none" stroke="#ea580c" strokeWidth="2.2" strokeLinecap="round" pathLength="1" className="animate-wavy-underline-delayed" />
